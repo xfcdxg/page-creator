@@ -1,0 +1,31 @@
+{
+  "name": "page-creator",
+  "version": "1.0.0",
+  "description": "create static page by next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xfcdxg/page-creator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xfcdxg/page-creator/issues"
+  },
+  "homepage": "https://github.com/xfcdxg/page-creator#readme",
+  "dependencies": {
+    "babel-plugin-import": "^1.6.2",
+    "express": "^4.16.2",
+    "mulan-lib": "^1.0.23",
+    "next": "^4.1.4",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
+  }
+}
