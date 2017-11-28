@@ -1,42 +1,15 @@
-import dynamic from 'next/dynamic'
-import { get, setServerUrl } from 'mulan-lib'
+import { get } from 'mulan-lib'
+import requireModules from '../lib/require-modules'
 import Layout from '../components/layout'
 
-const requireComponent = ({ component, props }) => {
+const App = ({ config }) => (
+  <Layout>
+    { config.map(module => requireModules(module)) }
+  </Layout>
+)
 
-  switch (component) {
-    case 'title':
-      const Title = dynamic(import('../components/title'))
-      return <Title { ...props } key={ props.id || '' } />
-
-    case 'content':
-      const Content = dynamic(import('../components/content'))
-      return <Content { ...props } key={ props.id || '' } />
-
-    case 'list':
-      const List = dynamic(import('../components/list'))
-      return <List { ...props } key={ props.id || '' } />
-
-    default: break
-  }
-}
-
-const App = ({ config }) => {
-  return (
-    <Layout>
-      {
-        config.map(module => requireComponent(module))
-      }
-    </Layout>
-  )
-}
-
-App.getInitialProps = async function({ req, query }) {
-  console.log(query)
-  const { id } = query
-  return await get(`http://localhost:3001/api/page/${ id || '0' }`)
-}
-
-
+App.getInitialProps = async ({ query }) => (
+  await get(`http://localhost:3001/api/page/${ query.id || '0' }`)
+)
 
 export default App
