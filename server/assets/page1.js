@@ -4,8 +4,16 @@ module.exports =
     {
       component: 'title',
       props: {
-        id: '1',
-        title: 'ceshi yixia test123456'
+        id: '07',
+        title: 'PAGE1 TITLE'
+      }
+    },
+
+    {
+      component: 'content',
+      props: {
+        id: '08',
+        content: 'page1 content'
       }
     },
   ]

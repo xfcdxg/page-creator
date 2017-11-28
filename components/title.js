@@ -1,7 +1,15 @@
 export default (
   ({ title }) => (
-    <div style={{ fontSize: '30px', borderBottom: '1px solid #f5f5f6' }}>
+    <div>
       { title }
+      <style jsx>{`
+        div {
+          font-size: 30px;
+          border-bottom: 1px solid #d6d6d6;
+          margin-bottom: 30px;
+          padding-bottom: 8px;
+        }
+      `}</style>
     </div>
   )
 )

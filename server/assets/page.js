@@ -2,55 +2,39 @@ module.exports =
 {
   config: [
     {
-      component: 'content',
+      component: 'title',
       props: {
-        id: '1',
-        content: 'lalalala'
+        id: '01',
+        title: 'INDEX PAGE TITLE'
       }
     },
 
     {
-      component: 'title',
+      component: 'content',
       props: {
-        id: '0',
-        title: 'TEST TITLE2'
+        id: '02',
+        content: 'index page content'
       }
     },
 
     {
       component: 'list',
       props: {
-        id: '2',
+        id: '03',
         list: [
           {
-            id: '21',
+            id: '04',
             text: 'list1'
           },
           {
-            id: '22',
+            id: '05',
             text: 'list2'
           },
           {
-            id: '23',
+            id: '06',
             text: 'list3'
           }
         ]
-      }
-    },
-
-    {
-      component: 'title',
-      props: {
-        id: '3',
-        title: 'TEST TITLE3'
-      }
-    },
-
-    {
-      component: 'title',
-      props: {
-        id: '4',
-        title: 'TEST TITLE4'
       }
     },
   ]
