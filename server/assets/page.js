@@ -41,7 +41,7 @@ module.exports =
     {
       component: 'title',
       props: {
-        id: '0',
+        id: '3',
         title: 'TEST TITLE3'
       }
     },
@@ -49,7 +49,7 @@ module.exports =
     {
       component: 'title',
       props: {
-        id: '0',
+        id: '4',
         title: 'TEST TITLE4'
       }
     },

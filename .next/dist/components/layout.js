@@ -26,9 +26,9 @@ exports.default = function (_ref) {
     className: 'jsx-1449577511' + ' ' + 'link-container'
   }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement('a', {
     className: 'jsx-1449577511'
-  }, 'Index')), _react2.default.createElement(_link2.default, { href: '/page1' }, _react2.default.createElement('a', {
+  }, 'Index')), _react2.default.createElement(_link2.default, { as: '/page/1', href: '/?id=1' }, _react2.default.createElement('a', {
     className: 'jsx-1449577511'
-  }, 'Page1')), _react2.default.createElement(_link2.default, { href: '/page2' }, _react2.default.createElement('a', {
+  }, 'Page1')), _react2.default.createElement(_link2.default, { as: '/page/2', href: '/?id=2' }, _react2.default.createElement('a', {
     className: 'jsx-1449577511'
   }, 'Page2'))), _react2.default.createElement('div', {
     className: 'jsx-1449577511'

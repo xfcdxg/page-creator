@@ -1,25 +1,22 @@
 const express = require('express')
-const page = require('./page')
-const page1 = require('./page1')
-const page2 = require('./page2')
+const next = require('next')
+const api = require('./api')
 
-const app = express()
+const PORT = 3001
 
+const dev = process.env.NODE_ENV !== 'production'
+const app = next({ dev })
+const handle = app.getRequestHandler()
 
-app.use(express.static('out'))
+app.prepare().then(() => {
+  const server = api(express(), app).get('*', (req, res) => handle(req, res))
 
-app.get('/api/page', (res, resp) => {
-  resp.json(page)
-})
+  if (!dev) server.use(express.static('out'))
 
-app.get('/api/page1', (res, resp) => {
-  resp.json(page1)
-})
-
-app.get('/api/page2', (res, resp) => {
-  resp.json(page2)
-})
-
-app.listen(3001, () => {
-  console.log('app run at: 3001')
+  server.listen(PORT, () => {
+    console.log('app run at: ', PORT)
+  })
+}).catch((ex) => {
+  console.error(ex.stack)
+  process.exit(1)
 })

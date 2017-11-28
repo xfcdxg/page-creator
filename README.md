@@ -2,8 +2,6 @@
 
 create static page by next.js
 
-问题：layout跳转不了
-
 ### Build
 
 ```bash
@@ -18,11 +16,16 @@ export前先要启动服务
   $ npm run export
 ```
 
-
-### 启动服务
+### 测试
 
 ```bash
-  $ npm run server
+  $ npm run dev
+```
+
+### 正式
+
+```bash
+  $ npm run start
 ```
 
 

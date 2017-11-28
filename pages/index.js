@@ -33,8 +33,8 @@ const App = ({ config }) => {
 
 App.getInitialProps = async function({ req, query }) {
   console.log(query)
-  const { page } = query
-  return await get(`http://localhost:3001/api/${ page || 'page' }`)
+  const { id } = query
+  return await get(`http://localhost:3001/api/page/${ id || '0' }`)
 }
 
 

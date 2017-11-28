@@ -149,15 +149,15 @@ App.getInitialProps = function () {
   var _ref4 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(_ref3) {
     var req = _ref3.req,
         query = _ref3.query;
-    var page;
+    var id;
     return _regenerator2.default.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             console.log(query);
-            page = query.page;
+            id = query.id;
             _context.next = 4;
-            return (0, _get3.default)('http://localhost:3001/api/' + (page || 'page'));
+            return (0, _get3.default)('http://localhost:3001/api/page/' + (id || '0'));
 
           case 4:
             return _context.abrupt('return', _context.sent);
